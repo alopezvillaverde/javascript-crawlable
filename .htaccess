@@ -1,0 +1,7 @@
+#Apache configuration file
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*)  /phantom.php?url=$1		[L,NE]
